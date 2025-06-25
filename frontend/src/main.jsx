@@ -22,6 +22,7 @@ import Mylist from './components/mylist.jsx'
 import UpdateRoommatePost from './components/updateroom.jsx';
 import DetailsPage from './components/detailspage.jsx';
 import Loader from './components/loader.jsx';
+import AboutSection from './components/about.jsx';
 
 const router = createBrowserRouter([
   {
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
       {
         path: 'about',
         Component: About
+      },
+      {
+        path: 'aboutsection',
+        Component: AboutSection
       },
       {
         path: 'register',
