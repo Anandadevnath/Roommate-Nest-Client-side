@@ -40,7 +40,7 @@ const NavBar = () => {
             </li>
             <li>
                 <NavLink 
-                    to="/browselist" 
+                    to="/allitems" 
                     className={({ isActive }) => 
                         `text-white browser hover:text-blue-400 flex items-center gap-2 transition-all duration-300 px-4 py-2 rounded-lg hover:bg-blue-500/20 ${
                             isActive ? 'text-blue-400 bg-blue-500/20' : ''
@@ -48,7 +48,7 @@ const NavBar = () => {
                     } 
                     onClick={closeMobileMenu}
                 >
-                    Browse Listings
+                    All Room lists
                 </NavLink>
             </li>
             <li>
@@ -90,6 +90,19 @@ const NavBar = () => {
                             onClick={closeMobileMenu}
                         >
                             My Listings
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink 
+                            to="/dashboard" 
+                            className={({ isActive }) => 
+                                `text-white mylist hover:text-blue-400 flex items-center gap-2 transition-all duration-300 px-4 py-2 rounded-lg hover:bg-blue-500/20 ${
+                                    isActive ? 'text-blue-400 bg-blue-500/20' : ''
+                                }`
+                            } 
+                            onClick={closeMobileMenu}
+                        >
+                            Dashboard
                         </NavLink>
                     </li>
                 </>

@@ -17,12 +17,13 @@ import Error from './components/Error/Error.jsx';
 import ForgotPassword from './components/Forgotpassword/Forgotpassword.jsx';
 import About from './components/About/About.jsx';
 import Createpost from './components/createroom.jsx'
-import Browselist from './components/browselist.jsx'
 import Mylist from './components/mylist.jsx'
 import UpdateRoommatePost from './components/updateroom.jsx';
 import DetailsPage from './components/detailspage.jsx';
 import Loader from './components/loader.jsx';
 import AboutSection from './components/about.jsx';
+import Allitems from './components/allitems.jsx';
+import Dashboard from './components/dashboard.jsx';
 
 const router = createBrowserRouter([
   {
@@ -42,8 +43,16 @@ const router = createBrowserRouter([
         Component: About
       },
       {
+        path: 'dashboard',
+        Component: Dashboard
+      },
+      {
         path: 'aboutsection',
         Component: AboutSection
+      },
+      {
+        path: 'allitems',
+        Component: Allitems
       },
       {
         path: 'register',
@@ -63,7 +72,7 @@ const router = createBrowserRouter([
       },
       {
         path: 'browselist',
-        element: <PrivateRoute><Browselist></Browselist></PrivateRoute>
+        element: <PrivateRoute><Allitems></Allitems></PrivateRoute>
       },
       {
         path: 'mylist',
