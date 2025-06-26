@@ -131,7 +131,6 @@ const NavBar = () => {
                     {/* Right side - Theme toggle and auth buttons */}
                     <div className="flex items-center gap-2 sm:gap-4">
                         <div className="transform hover:scale-110 transition-transform duration-200">
-                            <ThemeToggle />
                         </div>
                         {!user ? (
                             <div className="hidden sm:flex items-center gap-2">
