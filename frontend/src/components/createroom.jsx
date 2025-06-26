@@ -42,7 +42,7 @@ const CreateRoommatePost = () => {
         setPosting(true);
         setPostError('');
         try {
-            const res = await fetch('https://backend-five-pied-99.vercel.app/roommates', {
+            const res = await fetch('http://localhost:5000/roommates', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(form),

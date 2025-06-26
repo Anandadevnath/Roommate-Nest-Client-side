@@ -14,7 +14,7 @@ function BrowseList() {
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch('https://backend-five-pied-99.vercel.app/roommates')
+        fetch('http://localhost:5000/roommates')
             .then(res => res.json())
             .then(data => {
                 setRoommates(data);

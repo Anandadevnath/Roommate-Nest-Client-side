@@ -12,7 +12,7 @@ function MyList() {
 
   useEffect(() => {
     if (!user?.email) return;
-    fetch(`https://backend-five-pied-99.vercel.app/my-listings?email=${user.email}`)
+    fetch(`http://localhost:5000/my-listings?email=${user.email}`)
       .then(res => res.json())
       .then(data => {
         setMyListings(data);
@@ -34,7 +34,7 @@ function MyList() {
       color: '#fff'
     });
     if (result.isConfirmed) {
-      const res = await fetch(`https://backend-five-pied-99.vercel.app/roommates/${id}`, { method: 'DELETE' });
+      const res = await fetch(`http://localhost:5000/roommates/${id}`, { method: 'DELETE' });
       if (res.ok) {
         setMyListings(myListings.filter(item => item._id !== id));
         Swal.fire({

@@ -26,7 +26,7 @@ const UpdateRoommatePost = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch(`https://backend-five-pied-99.vercel.app/roommates/${id}`)
+        fetch(`http://localhost:5000/roommates/${id}`)
             .then(res => res.json())
             .then(data => {
                 setForm({
@@ -47,7 +47,7 @@ const UpdateRoommatePost = () => {
         setUpdating(true);
         setError('');
         try {
-            const res = await fetch(`https://backend-five-pied-99.vercel.app/roommates/${id}`, {
+            const res = await fetch(`http://localhost:5000/roommates/${id}`, {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
