@@ -1,0 +1,137 @@
+.active {
+    color: #60a5fa !important;
+    background: rgba(59, 130, 246, 0.2) !important;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.3);
+}
+
+.navbar {
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+    background: linear-gradient(to right, 
+        rgba(15, 23, 42, 0.95), 
+        rgba(30, 41, 59, 0.95), 
+        rgba(15, 23, 42, 0.95)
+    );
+}
+
+.animate-fade-in-down {
+    animation: fadeInDown 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Enhanced navbar link hover effects */
+.navbar a {
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    border-radius: 0.5rem;
+}
+
+.navbar a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.2);
+}
+
+.navbar a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.navbar a:hover::before {
+    width: 80%;
+}
+
+/* Mobile menu improvements */
+@media (max-width: 1024px) {
+    .navbar-center {
+        display: none;
+    }
+}
+
+/* Ensure navbar stays on top with glass effect */
+.navbar {
+    position: fixed !important;
+    top: 0;
+    z-index: 9999;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* Logo styling with glow effect */
+.title, .titlemb {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    text-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+}
+
+/* Enhanced button hover effects */
+.btn {
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.btn:hover::before {
+    left: 100%;
+}
+
+/* Glassmorphism effect for mobile menu */
+.mobile-menu-bg {
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    background: rgba(30, 41, 59, 0.95);
+    border-top: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+/* Smooth scrolling for navbar links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Active link styling enhancement */
+.navbar .active {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(139, 92, 246, 0.2));
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    box-shadow: 
+        0 0 20px rgba(59, 130, 246, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* Navbar link active state with gradient */
+.navbar a.active::before {
+    width: 100%;
+    background: linear-gradient(90deg, #3b82f6, #8b5cf6, #3b82f6);
+}
